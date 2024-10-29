@@ -1,0 +1,43 @@
+xrun(64): 23.09-s003: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.09-s003: Started on Sep 19, 2024 at 13:33:36 +07
+xrun
+	-sv
+	-f ../00_src/flist.f
+		../00_src/register.sv
+		../00_src/Exercise1.sv
+		../00_src/adder.sv
+		../00_src/compare_A_lt_B.sv
+		../00_src/FSM.sv
+	../01_tb/testbench.sv
+	-timescale 1ps/1ps
+	+access+rwc
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		Exercise1_tb
+	Building instance overlay tables: .................... Done
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                13       6
+		Registers:              60      53
+		Scalar wires:           54       -
+		Vectored wires:         43       -
+		Always blocks:          14       7
+		Initial blocks:          2       2
+		Cont. assignments:       4       4
+		Pseudo assignments:     51       -
+		Process Clocks:          7       2
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.Exercise1_tb:sv
+Loading snapshot worklib.Exercise1_tb:sv .................... Done
+SVSEED default: 1
+xcelium> source /tools/cadence/XCELIUM2309/tools/xcelium/files/xmsimrc
+xcelium> run
+MIN:   5
+MAX: 255
+Simulation complete via $finish(1) at time 20745 PS + 0
+../01_tb/testbench.sv:70         $finish;
+xcelium> exit
+TOOL:	xrun(64)	23.09-s003: Exiting on Sep 19, 2024 at 13:33:38 +07  (total: 00:00:02)
